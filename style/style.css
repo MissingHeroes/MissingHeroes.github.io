@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: linear-gradient(to right, black, hsl(200, 63%, 16%), black);
+    overflow-y: scroll;
+}
+
+.tabs {
+    width: 720px;
+    max-width: 100vw;
+    margin: 7px auto 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs label {
+    background-image: url(../images/button/entrybg0.png);
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 120px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs label:hover {
+    background-image: url(../images/button/entrybg1.png);
+}
+
+.tabs label:active {
+    background-image: url(../images/button/entrybg2.png);
+}
+
+.tabs .tab-content {
+    order: 1;
+    display: none;
+}
+
+.tabs img {
+    max-width: 100vw;
+    height: auto;
+}
+
+.tabs input[type="radio"]:checked + label {
+    background-image: url(../images/button/entrybg3.png);
+    cursor: default;
+}
+
+.tabs input[type="radio"]:checked + label + .tab-content {
+    display: block;
+}
